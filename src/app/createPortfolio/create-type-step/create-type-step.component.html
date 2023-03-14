@@ -1,0 +1,157 @@
+<div class="body">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <h1 style="text-align: center; font-weight: bold;
+        font-style: italic;
+        font-size:x-large;
+        color: #181823;">FOLIO</h1>
+        <hr/>
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start partie1">
+            <h1 class="display-4 fw-bold lh-1 mb-3">What's your portfolio about?</h1>
+            <!---
+             <a href="#" class="clickableImage">
+                    <img src="../../../assets/images/step1vecteur.png" alt="step1 image">
+             </a>
+            -->
+            <form class="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center typesgrid" uk-grid #ftypeSelect = "ngForm" (ngSubmit)="onSelectType(ftypeSelect)">
+                <div>
+                    <input 
+                    type="radio" name="colors" 
+                    id="archi" class="input-hidden" value = "archiecture" [(ngModel)]='portfolioType' [ngModelOptions]="{standalone: true}" />
+                    <label for="archi">
+                    <div class="uk-card uk-card-default uk-card-body typeitem">
+                        <div class="uk-inline">
+                            <img src="../../../assets/images/types/architec.jpg" alt="">
+                            <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                                <p>Architecture.</p>
+                            </div>
+                    </div>
+                    </div>
+                    </label>
+                </div>
+                <div>
+                    <input 
+                    type="radio" name="colors" 
+                    id="art" class="input-hidden" value = "art" [(ngModel)]='portfolioType' [ngModelOptions]="{standalone: true}"/>
+                    <label for="art">
+                    <div class="uk-card uk-card-secondary uk-card-body typeitem">
+                        <div>
+
+                            <div class="uk-inline">
+                                <img src="../../../assets/images/types/art.jpg" alt="">
+                                <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                                    <p>Art</p>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    </label>
+                </div>
+
+                
+                <div>
+                    <input 
+                    type="radio" name="colors" 
+                    id="market" class="input-hidden" value = "marketing" [(ngModel)]='portfolioType' [ngModelOptions]="{standalone: true}"/>
+                    <label for="market">
+                    <div class="uk-card uk-card-default uk-card-body typeitem">
+                        <div>
+
+                            <div class="uk-inline">
+                                <img src="../../../assets/images/types/marketing.jpg" alt="">
+                                <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                                    <p>Marketing</p>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    </label>
+                </div>
+                <div>
+                    <input 
+                    type="radio" name="colors" 
+                    id="design" class="input-hidden" value = "design" [(ngModel)]='portfolioType' [ngModelOptions]="{standalone: true}"/>
+                    <label for="design">
+                    <div class="uk-card uk-card-default uk-card-body typeitem">
+                        <div>
+
+                            <div class="uk-inline">
+                                <img src="../../../assets/images/types/graphicDesign.jpg" alt="">
+                                <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                                    <p>Design</p>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    </label>
+                </div>
+                
+                <div>
+                    <input 
+                    type="radio" name="colors" 
+                    id="fashion" class="input-hidden" value = "fashion" [(ngModel)]='portfolioType' [ngModelOptions]="{standalone: true}"/>
+                    <label for="fashion">
+                    <div class="uk-card uk-card-primary uk-card-body typeitem">
+                        <div>
+
+                            <div class="uk-inline">
+                                <img src="../../../assets/images/types/fashion.jpg" alt="">
+                                <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                                    <p>fashion</p>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    </label>
+                </div>
+                <div>
+                    <input 
+                    type="radio" name="colors" 
+                    id="photo" class="input-hidden" value = "photography" [(ngModel)]='portfolioType' [ngModelOptions]="{standalone: true}"/>
+                    <label for="photo">
+                    <div class="uk-card uk-card-default uk-card-body typeitem">
+                        <div>
+
+                            <div class="uk-inline">
+                                <img src="../../../assets/images/types/photography.jpg" alt="">
+                                <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+                                    <p>Photography</p>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    </label>
+                </div>
+                <div class="col-12" style="margin-top: 10px; width: 100%; display: flex; flex-direction: row;">
+                    <input type="submit" class="btn btn-primary btn-lg select" value="Select">
+                </div>
+            </form>
+             <div class="btns">
+                <button class="btn btn-primary btn-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                  </svg> Back</button>
+                
+                <button class="btn btn-primary btn-lg" (click)="onContinue()">Continue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg></button>
+
+             </div>
+             
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5 partie2">
+            <div class="p-4 p-md-5 border rounded-3">
+            <img src="../../../assets/images/step1.jpg" alt="step 1 image">
+            <div>
+                <h2>O3</h2>
+                <p>This tells us what topic or theme your Portfolio website covers, so that we can provide high-quality images, text, and a structure to match.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

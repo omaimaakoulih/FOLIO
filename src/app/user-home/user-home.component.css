@@ -1,0 +1,23 @@
+.topDiv{
+    height:auto;
+}
+.navbar-brand{
+
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    font-size:large;
+    color: #181823;
+}
+.align-items-md-stretch{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.btn-outline-light{
+    background-color: #0081B4;
+    border-color: #0081B4;
+}
+.myportfolios{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}

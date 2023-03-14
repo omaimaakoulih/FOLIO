@@ -1,0 +1,47 @@
+.container{
+    width:100%;
+    min-height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECF2FF;
+}
+.m-auto{
+    width:370px;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.m-auto h1{
+    font-style: italic;
+    color: #181823;
+}
+.form-floating{
+    margin-bottom: 10px;
+}
+form{
+    width:100%;
+    margin-top: 10px;
+}
+form h3{
+    font-weight: lighter;
+    
+}
+.btn-primary{
+    margin-bottom: 10px;
+    background-color: #635985;
+    border-color: #635985;
+}
+.btn-outline-primary{
+    
+    color: black;
+    border-color: #635985;
+
+}
+.btn-outline-primary:hover{
+    background-color: #635985;
+    color: white;
+}

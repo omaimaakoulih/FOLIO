@@ -1,0 +1,117 @@
+
+.body{
+    background-color: #E3DFFD;
+}
+.container{
+    width:100%;
+    background-color: white;
+    height:95%;
+    
+}
+.container img{
+    width:250px;
+    height:100%;
+    border-radius: 10px;
+}
+.mb-3{
+    font-size: 20px;
+}
+.partie1{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: center;
+    border-right: 1px black groove;
+    
+}
+.clickableImage{
+    margin-top: 25px;
+    border:1px #ECF2FF groove;
+    padding:5px;
+    border-radius: 10px;
+}
+.clickableImage img{
+    width:250px;
+    height:250px;
+}
+.clickableImage:hover{
+    
+    box-shadow: 1px 1px 20px #0d6efd;
+}
+.clickableImage:focus{
+    
+    box-shadow: 1px 1px 20px #0d6efd;
+}
+.btns{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 33px;
+    padding-top: 7px;
+    border-top: 1px #ECF2FF groove;
+
+}
+.btns button{
+    height:37px;
+    font-size: 15px;
+    width:120px;
+}
+.p-4{
+    padding:-20px;
+    background-color: #E3DFFD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.partie2{
+    background-color: white;
+}
+.row{
+    margin-top: -70px;
+}
+.typesgrid{
+    margin-top: 25px;
+}
+
+
+/**/
+.services{
+    height:300px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.addServiceBtn{
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 10px;
+}
+
+form input,textarea{
+    width:90%;
+    height:50px;
+}
+form label{
+    font-size:medium;
+}
+form .inputDiv{
+    width:100%;
+}
+form button{
+    width: 90%;
+    margin-right: 33px;
+}
+
+.afficher{
+    width:100%;
+    height:550px;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+
+

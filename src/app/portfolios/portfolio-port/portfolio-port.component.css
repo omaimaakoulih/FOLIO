@@ -1,0 +1,26 @@
+/*.div1{
+    background-color: #E3DFFD;
+}*/
+.div1 .container p{
+    color:#F3EFE0;
+}
+.div1 .container h1{
+    color: #383838;
+}
+.px-0{
+    margin-right: 40px;
+    margin-left: 20px;
+    font-size: larger;
+    color: #FFFBF5;
+}
+.active{
+    color:#191825;
+    text-decoration: line-through;
+}
+.px-0:hover{
+    color:#191825;
+}
+/*.inside{
+    background-color: black;
+}
+*/

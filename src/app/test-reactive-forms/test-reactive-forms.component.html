@@ -1,0 +1,35 @@
+<div class="affichage">
+    <p>{{jForm}}</p>
+</div>
+<form [formGroup]="myForm" (ngSubmit)="signU()">
+          
+    <h3 class="h3 mb-3">Create an account</h3>
+
+    <div class="form-floating">
+      <input type="email"  class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingname" placeholder="name"  formControlName = "userName">
+      <label for="floatingname">Name</label>
+    </div>
+    <div class="form-floating">
+      <input type="password"  class="form-control" id="floatingPassword" placeholder="Password" formControlName = "password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingConfPassword" placeholder="Password" formControlName = "confirmPassword">
+      <label for="floatingConfPassword">Confirm</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me" required> Accept Privacy Policy
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Create</button>
+    <hr/>
+    <p>Aready have one?</p>
+    <button class="w-100 btn btn-lg btn-outline-primary" routerLink="/login">Log In</button>
+    
+  </form>

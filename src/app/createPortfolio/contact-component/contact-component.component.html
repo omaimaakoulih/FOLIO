@@ -1,0 +1,61 @@
+<div class="uk-height-medium">
+
+    <nav class="uk-navbar-container">
+        <div class="uk-container">
+            <div uk-navbar>
+
+                <div class="uk-navbar-right">
+                    <div class="title">
+                        <h4>{{contact.name}}</h4>
+                    </div>
+
+                    <ul class="uk-navbar-nav">
+                        
+                        <li>
+                             
+                            
+                            <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#" style="font-size: x-large;"></a>
+                            <div class="uk-navbar-dropdown" uk-drop="boundary: !.uk-navbar; stretch: x; flip: false">{{contact.adress}}.</div>
+                        
+                        </li>
+                        <li>
+                            <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-icon="pencil" style="font-size: x-large;"  uk-toggle></a>
+                            <div class="uk-navbar-dropdown" uk-drop="boundary: !.uk-navbar; stretch: x; flip: false">
+                                <div class="uk-modal-dialog">
+                                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                                    <div class="uk-modal-header">
+                                        <h2 class="uk-modal-title">Modify the Project</h2>
+                                    </div>
+                                    <div class="uk-modal-body">
+                                      <form class="p-4 p-md-5 border rounded-3" #fProjectModif = "ngForm" (ngSubmit)="onModifyUrl(fProjectModif)">
+                                        <div class="form-floating mb-3 inputDiv">
+                                          <input type="url" class="form-control" id="floatingInput" placeholder="Project name"  [(ngModel)]='url' [ngModelOptions]="{standalone: true}">
+                                          <label for="floatingInput">Url</label>
+                                        </div>
+                                    
+                                        <button class="btn btn-lg btn-primary" type="submit">Save</button>
+                                        
+                                      </form>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                           
+                       </li>
+                       <li>
+                        <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-icon="trash" (click)="deleteContact()" style="font-size: x-large;"></a>
+        
+                   </li>
+                        
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+</div>
+
+

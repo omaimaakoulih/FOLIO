@@ -1,0 +1,44 @@
+.foliologo{
+    font-weight: bold;
+    font-style: italic;
+    font-size:large;
+    color: #181823;
+}
+
+.btn-primary , .btn-outline-primary{
+    margin-right: 10px;
+}
+.btn-primary{
+    background-color: #635985;
+    color:white;
+    text-decoration: none;
+    border-color: #635985;
+}
+.btn-primary:hover, .btn-outline-primary:hover{
+    background-color:#E5D1FA ;
+    color: black;
+}
+.btn-outline-primary{
+    color: black;
+    border-color: #635985;
+}
+.btnCh{
+    margin-bottom: 20px;
+}
+.featurette{
+    padding:20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.featurette h2{
+    font-weight: 300;
+    color:#18122B;
+    margin-top: 20px;
+}
+.uk-container p,h3{
+    font-weight: 350;
+}
+.uk-container{
+    margin-bottom: 20px;
+}
+

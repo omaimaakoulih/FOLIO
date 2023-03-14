@@ -1,0 +1,71 @@
+<div class="body">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <h1 style="text-align: center; font-weight: bold;
+        font-style: italic;
+        font-size:x-large;
+        color: #181823;">FOLIO</h1>
+        <hr/>
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start partie1">
+            <h1 class="display-4 fw-bold lh-1 mb-3">Pick the portfolio you want to work with</h1>
+            <!---
+             <a href="#" class="clickableImage">
+                    <img src="../../../assets/images/step1vecteur.png" alt="step1 image">
+             </a>
+            -->
+            <form class="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center typesgrid" uk-grid #ftypeSelect = "ngForm" (ngSubmit)="onSelectType(ftypeSelect)">
+                <div>
+                    <input 
+                    type="radio" name="type" 
+                    id="archi" class="input-hidden" value = "type1" [(ngModel)]='portfoliochoose' [ngModelOptions]="{standalone: true}" />
+                    <label for="archi">
+                    <div class="uk-card uk-card-default uk-card-body typeitem">
+                        <div class="uk-inline">
+                            <img src="../../../assets/templates/artist2.png" alt="">
+                            
+                    </div>
+                    </div>
+                    <button class="reviewBtn" (click)="reviewType1()">Review</button>
+                    </label>
+                </div>
+                <div>
+                    <input 
+                    type="radio" name="type" 
+                    id="art" class="input-hidden" value = "type2" [(ngModel)]='portfoliochoose' [ngModelOptions]="{standalone: true}"/>
+                    <label for="art">
+                    <div class="uk-card uk-card-secondary uk-card-body typeitem">
+                        <div>
+
+                            <div class="uk-inline">
+                                <img src="../../../assets/images/types/art.jpg" alt="">
+                                
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <button class="reviewBtn" (click)="reviewType2()">Review</button>
+                    </label>
+                </div>
+                <div class="col-12" style="margin-top: 20px; width: 100%; display: flex; flex-direction:row-reverse;">
+                    <input type="submit" class="btn btn-primary btn-lg select" value="Select">
+                </div>
+            </form>
+            
+             <div class="btns">
+                <button class="btn btn-primary btn-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                  </svg> Back</button>
+                
+                <button class="btn btn-primary btn-lg" (click)="onFinish()">Finish <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg></button>
+
+                </div>
+             
+          </div>
+          
+          
+        </div>
+      </div>
+  </div>
+

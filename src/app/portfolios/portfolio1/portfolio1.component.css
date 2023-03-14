@@ -1,0 +1,40 @@
+.text-bg-dark{
+    height:100vh;
+    filter: brightness(90%);
+   /* background-image: url('../../../assets/templates/art/photo1.jpg');*/
+}
+main{
+    color:black;
+}
+.px-0{
+    margin-right: 40px;
+    margin-left: 20px;
+    font-size: larger;
+    color: #FFFBF5;
+}
+.active{
+    color:#191825;
+    text-decoration: line-through;
+}
+.px-0:hover{
+    color:#191825;
+}
+.btn{
+    background-color: #FFFBF5;
+}
+.btn:hover{
+    background-color: #191825;
+    color:white;
+    box-shadow: 10px 10px 1px white;
+}
+a{
+    text-decoration: none;
+}
+.uk-icon-button{
+    /*background-color: #191825;*/
+    width:25px;
+    height:25px;
+    color: black;
+    margin-left: 25px;
+    margin-right: 25px;    
+}

@@ -1,0 +1,31 @@
+<div class="d-flex text-center div1" [style.background-color]="portfolio.colors[1]">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <nav class="nav nav-masthead justify-content-center float-md-center">
+            <a class="nav-link fw-bold py-1 px-0" aria-current="page" (click)="portfolioHome()">Home</a>
+            <a class="nav-link fw-bold py-1 px-0 active">Portfolio</a>
+            <a class="nav-link fw-bold py-1 px-0" (click)="portfolioContact()">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 shadow-lg inside" [style.background-color]="portfolio.colors[0]"> <!-- [style.background-color]="portfolio.colors[0]" -->
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1">{{portfolio.nam}}</h1>
+            <p class="lead">{{description}}.</p>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+              <img class="rounded-lg-3" [src]=" image2 " alt="" width="720">
+          </div>
+        </div>
+      </div>
+      <app-portfolio-skolls [portfolioId]="portfolioId"></app-portfolio-skolls>
+      <app-portfolio-services [portfolioId]="portfolioId"></app-portfolio-services>
+
+
+
+    </div>
+</div>
+    

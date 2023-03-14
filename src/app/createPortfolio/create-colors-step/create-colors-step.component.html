@@ -1,0 +1,125 @@
+<div class="body">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <h1 style="text-align: center; font-weight: bold;
+        font-style: italic;
+        font-size:x-large;
+        color: #181823;">FOLIO</h1>
+        <hr/>
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start partie1">
+            <h1 class="display-4 fw-bold lh-1 mb-3">Which colors de you like?</h1>
+            <!---
+             <a href="#" class="clickableImage">
+                    <img src="../../../assets/images/step1vecteur.png" alt="step1 image">
+             </a>
+            -->
+            <form class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" #fcolorSelect = "ngForm" (ngSubmit)="onColorSelected(fcolorSelect)">
+             
+                <input 
+                    type="radio" name="colors" 
+                    id="colors1" class="input-hidden" value="colors1" required [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+                    <label for="colors1">
+                        <div class="coloritems">
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <div class="color1" style="background-color: #181823;"></div>
+                                <div class="color2" style="background-color: #537FE7;"></div>
+                            </div>
+                        </div>
+                    </label>
+                
+                    <input 
+                    type="radio" name="colors" 
+                    id="colors2" class="input-hidden" value="colors2" [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+                    <label for="colors2">
+                        <div class="coloritems">
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <div class="color1" style="background-color: #A7727D;"></div>
+                                <div class="color2" style="background-color: #EDDBC7;"></div>
+                            </div>
+                        </div>
+
+                    </label>
+                
+                    <input 
+                    type="radio" name="colors" 
+                    id="colors3" class="input-hidden" value="colors3" [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+                    <label for="colors3">
+                        <div class="coloritems">
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <div class="color1" style="background-color: #3C6255;"></div>
+                                <div class="color2" style="background-color: #EAE7B1;"></div>
+                            </div>
+                        </div>
+
+                    </label>
+                
+                
+                       
+                    
+            
+                
+                <input 
+                type="radio" name="colors" 
+                id="colors4" class="input-hidden" value="colors4" [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+                <label for="colors4">
+                        <div class="coloritems">
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <div class="color1" style="background-color: #000000;"></div>
+                                <div class="color2" style="background-color: #323232;"></div>
+                            </div>
+                        </div>
+                </label>            
+
+                    
+                <input 
+                type="radio" name="colors" 
+                id="colors5" class="input-hidden" value="colors5" [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+                <label for="colors5">
+                        <div class="coloritems">
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <div class="color1" style="background-color: #181D31;"></div>
+                                <div class="color2" style="background-color: #678983;"></div>
+                            </div>
+                        </div>
+                </label>
+                <input 
+                type="radio" name="colors" 
+                id="colors6" class="input-hidden" value="colors6" [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+                <label for="colors6">
+                        <div class="coloritems">
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <div class="color1" style="background-color: #171010;"></div>
+                                <div class="color2" style="background-color: #E3DFFD;"></div>
+                            </div>
+                        </div>
+                </label>   
+            
+
+            <div class="col-12" style="margin-top: 10px; width: 100%; display: flex; flex-direction: row;">
+                <input type="submit" class="btn btn-primary btn-lg select" value="Select">
+            </div>
+            </form>
+             <div class="btns">
+                <button class="btn btn-primary btn-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                  </svg> Back</button>
+                <button class="btn btn-primary btn-lg" (click)="onContinue()">Continue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg></button>
+
+             </div>
+             
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5 partie2">
+            <div class="p-4 p-md-5 border rounded-3">
+            <img src="../../../assets/images/step1.jpg" alt="step 1 image">
+            <div>
+                <h2>O4</h2>
+                <p>This helps us understand the look you're going for, so that we can design your website to match.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+

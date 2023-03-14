@@ -1,0 +1,58 @@
+
+<nav class="navbar bg-light" aria-label="Light offcanvas navbar">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">FOLIO</a>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page">My Portfolios</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"  (click)="onProfileClick()">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+            
+              </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row align-items-md-stretch">
+    <h1>Portfolios</h1>
+  <hr/>
+    <div class="col-md-6">
+      <div class="h-100 p-5 text-bg-dark rounded-3">
+        <h2>Choose the website you want to work on, or create a new one.</h2>
+        <p>If you're a photographer, artist, designer, model, or creative, putting your work online is the best way to reach a larger audience. And you can do it in 4 easy steps.</p>
+        <button class="btn btn-outline-light" type="button" (click)="onCreate()">New Portfolio</button>
+      </div>
+    </div>
+    
+    <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center myportfolios" uk-grid>
+      
+      <app-portfolio-component *ngFor="let p of portfolios" [portfolio] = "p" [userName]="userName"></app-portfolio-component>
+      
+    </div>
+  </div>
+
+  <!-- User websites list-->

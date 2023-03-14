@@ -1,0 +1,22 @@
+<div>
+    <div class="uk-card uk-card-default uk-card-body portfolioCard">
+        <div class="portfolioInfos">
+        <h2>{{portfolio.nam}}</h2>
+        <h5>State: <span class="state">Unpublished</span></h5>
+        </div>
+        <div class="actions">
+            <button class="uk-button uk-button-default" type="button">Actions <span uk-drop-parent-icon></span></button>
+            <div uk-dropdown>
+                <ul class="uk-nav uk-dropdown-nav">
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active"><a (click)="onEdit()" class="itemNav"><span uk-icon="pencil" class="itemIcon"></span> Edit</a></li>
+                    <li class="uk-active"><a (click)="onDelete()" class="itemNav"><span uk-icon="trash" class="itemIcon"></span> Delete</a></li>
+                    <li class="uk-nav-divider"></li>
+                </ul>
+            </div>
+            <button class="uk-button uk-button-default" type="button" (click)="onReview()">Review</button>
+
+        </div>
+
+    </div>
+</div>

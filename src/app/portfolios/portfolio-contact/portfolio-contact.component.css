@@ -1,0 +1,34 @@
+/*.div1{
+    background-color: #E3DFFD;
+*/
+.div1 .container p{
+    color:#F3EFE0;
+}
+.div1 .container h1{
+    color: #383838;
+}
+.px-0{
+    margin-right: 40px;
+    margin-left: 20px;
+    font-size: larger;
+    color: #FFFBF5;
+}
+.active{
+    color:#191825;
+    text-decoration: line-through;
+}
+.inside{
+    /*background-color: black;*/
+    border-radius: 20px;
+    margin-top: 5px;
+}
+.btn-primary{
+    background-color: #E5D1FA;
+    border-color: #E5D1FA;
+    color:black;
+}
+.uk-icon-button{
+    color: black;
+    margin-left: 25px;
+    margin-right: 25px;
+}

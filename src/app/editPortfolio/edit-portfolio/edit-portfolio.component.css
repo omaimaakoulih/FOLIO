@@ -1,0 +1,145 @@
+main{
+    background-color: #EEEEEE;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#partiPlay{
+    width:100%;
+    height:200px;
+    display: none;
+
+}
+#partiDescr,#partiColors, #partiService, #partiProject, #partiSkill, #partiContact{
+    width:100%;
+    display: none;
+}
+form{
+    width:90%;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.divDropDown{
+    width:100%;
+    display: flex;
+    flex-direction: row; 
+}
+.divDropDown button{
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    background-color:#EEEEEE;
+    margin-right: 20px;
+    color:#0d6efd;
+    border-color: #0d6efd;
+}
+
+
+
+
+.uk-card-body{
+    padding:10px;
+    width:200px;
+    height:100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+}
+.uk-card-body div{
+    width:50%;
+    height:100%;
+}
+
+
+.uk-card-body:hover{
+    box-shadow: 1px 1px 20px gray;
+    cursor: pointer;
+
+}
+
+.input-hidden {
+    position: absolute;
+    left: -9999px;
+  }
+.coloritems{
+    margin-bottom: 10px;
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input[type=radio]:checked + label>.coloritems {
+   
+    box-shadow: 0 0 5px 5px #0d6efd;
+  }
+  
+ 
+  input[type=radio] + label>.coloritems {
+    
+    width: auto;
+    height: auto;
+    transition: 500ms all;
+  }
+
+
+  /**************************************************/
+
+.services{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:90%;
+    margin-left: 20px;
+    
+}
+.addServiceBtn{
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 10px;
+}
+
+.servicesForm input,textarea{
+    width:90%;
+    height:50px;
+}
+.servicesForm label{
+    font-size:medium;
+}
+.servicesForm .inputDiv{
+    width:100%;
+}
+.servicesForm button{
+    width: 90%;
+    margin-right: 33px;
+}
+
+.afficher{
+    width:100%;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+/***************************************************/
+
+.btns{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 33px;
+    padding-top: 7px;
+    border-top: 1px #ECF2FF groove;
+
+}
+.btns button{
+    height:37px;
+    font-size: 15px;
+    width:120px;
+}

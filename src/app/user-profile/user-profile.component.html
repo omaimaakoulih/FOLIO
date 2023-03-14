@@ -1,0 +1,186 @@
+<div class="topDiv uk-overflow-auto">
+<nav class="navbar bg-light" aria-label="Light offcanvas navbar">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarLight" aria-controls="offcanvasNavbarLight">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">FOLIO</a>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarLight" aria-labelledby="offcanvasNavbarLightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLightLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" (click)="onPortfoliosClick()">My Portfolios</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+            
+              </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <form class="needs-validation" novalidate="" #fModify = "ngForm" (ngSubmit)="onChange(fModify)">
+  <div class="row featurette">
+    <div class="col-md-5" style="display: flex; justify-content: center; align-items: center;">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" [src]="image" alt=""/>
+    </div>
+    <div class="col-md-7" style="display: flex; justify-content: center;flex-direction: column; align-items: center; margin-top: 5px;">
+      <h2 class="featurette-heading fw-normal lh-1">User Name </h2>
+      
+      <button class="btn btn-primary" type="button" (click)="inputImage.click()">Edit picture</button>
+      <input type="file" #inputImage hidden (change)="onSelectImage($event)"/>
+    </div>
+    
+  </div>
+  <hr/>
+
+  <!---->
+  <div class="col-md-7 col-lg-8">
+    <h4 class="mb-3">Profile</h4>
+    
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="firstName" class="form-label">First name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="" value=""  [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}">
+          <div class="invalid-feedback">
+            Valid first name is required.
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="lastName" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="" value=""  [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}">
+          <div class="invalid-feedback">
+            Valid last name is required.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="username" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" id="username" placeholder="Username" required [(ngModel)]="user.userName" value="{{user.userName}}" [ngModelOptions]="{standalone: true}">
+          <div class="invalid-feedback">
+              Your username is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" [(ngModel)]="user.email" value="{{user.email}}" [ngModelOptions]="{standalone: true}" required>
+          <div class="invalid-feedback">
+            Please enter a valid email.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" class="form-control" id="address" placeholder="1234 Main St" [(ngModel)]="address" [ngModelOptions]="{standalone: true}">
+          <div class="invalid-feedback">
+            Please enter your address.
+          </div>
+        </div>
+
+        <div class="col-12">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" placeholder="Phone Number" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}">
+          </div>
+
+        <div class="col-md-5">
+          <label for="country" class="form-label">Country</label>
+          <select class="form-select" id="country" [(ngModel)]="country" [ngModelOptions]="{standalone: true}">
+            <option value="">Choose...</option>
+            <option>United States</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid country.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="state" class="form-label">State</label>
+          <select class="form-select" id="state" [(ngModel)]="city" [ngModelOptions]="{standalone: true}">
+            <option value="">Choose...</option>
+            <option>California</option>
+          </select>
+          <div class="invalid-feedback">
+            Please provide a valid state.
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="my-4">
+
+      <a class="uk-button uk-button-default" href="#modal-overflow" uk-toggle>Change Password</a>
+
+   <div id="modal-overflow" uk-modal>
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">New Password</h2>
+        </div>
+        <form #fPassword ="ngForm" (ngSubmit)="oncheckPassword(fPassword)">
+        <div class="uk-modal-body" uk-overflow-auto>
+
+            <div class="col-md-7 col-lg-8">
+                
+                    <div class="col-12">
+                        <label for="email" class="form-label">New Password </label>
+                        <input type="password" class="form-control" id="password" placeholder="New password" [(ngModel)]="newPassword" [ngModelOptions]="{standalone: true}" required>
+                        <div class="invalid-feedback">
+                          Please enter new password.
+                        </div>
+                      </div>
+              
+                      <div class="col-12">
+                        <label for="passwordconf" class="form-label">Confirm</label>
+                        <input type="password" class="form-control" id="passwordconf" placeholder="Confirm the password" [(ngModel)]="confPassword" [ngModelOptions]="{standalone: true}" required>
+                        <div class="invalid-feedback">
+                          Please r-enter the password.
+                        </div>
+                      </div>
+                 <div class="col-12">
+                  <button class="btn btn-primary btn-lg" style="margin-top: 10px;" type="submit">Save</button>
+                 </div>
+            </div>
+
+        </div>
+        </form>
+
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" style="border-radius: 10px;" type="button">Cancel</button>
+        </div>
+
+    </div>
+    </div>
+   <hr/>
+
+      <input class="w-100 btn btn-primary btn-lg" type="submit" value="Save Changes">
+    
+  </div>
+  </form>
+
+
+  </div>

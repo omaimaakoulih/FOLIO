@@ -1,0 +1,399 @@
+<main>
+    <div class="container py-4">
+      <header class="pb-3 mb-4 border-bottom title">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <span class="fs-4">FOLIO</span>
+        </a>
+      </header>
+
+      <!-- add elements here -->
+      <div class="container">
+        <div class="d-flex justify-content-center py-3">
+          <ul class="nav nav-pills">
+            <li class="nav-item"><h3>Edit Your Portfolio</h3></li>
+          </ul>
+        </div>
+      </div>
+      <hr/>
+      <div class="nameEdit">
+        <div class="divDropDown">
+          <button id="nameEditBtn" onclick="show()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg></button>
+          <h4>Modify the name</h4>
+        </div>
+        <hr/>
+        <div id="partiPlay">
+            <form #fportfolioname = "ngForm" (ngSubmit)="onNameEdit(fportfolioname)">
+                <div class="col-12">
+                    <label for="name" class="form-label"> </label>
+                    <input type="text" class="form-control" id="name" placeholder="Write the Portfolio name" required [(ngModel)]="name" value="{{name}}" [ngModelOptions]="{standalone: true}">
+                    
+                  </div>
+                  <div class="col-12" style="margin-top: 10px; width: 100%; display: flex; flex-direction: row;">
+                    <input type="submit" class="btn btn-primary" value="Save" style="justify-self: flex-end;">
+                </div>
+                </form> 
+
+        </div>
+      </div>
+      <div class="nameEdit">
+        <div class="divDropDown">
+          <button id="descriptionEditBtn" onclick="showEditDescription()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg></button>
+          <h4>Modify the description</h4>
+        </div>
+        <hr/>
+        <div id="partiDescr">
+          <form #fDescription = "ngForm" (ngSubmit)="onDescriptionEdit(fDescription)">
+            <div class="col-12">
+                <label for="about" class="form-label">About you : </label>
+                <textarea class="form-control" id="about" placeholder="Write a paragraph about you" required [(ngModel)]="description" value ="{{description}}" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+            <div class="col-12" style="margin-top: 10px;">
+                <label for="small" class="form-label">A small description of you : </label>
+                <textarea class="form-control text2" id="small" placeholder="Description" required [(ngModel)]="smallDesc" value="{{smallDesc}}" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+            <div class="col-12" style="margin-top: 10px; width: 100%; display: flex; flex-direction: row;">
+                <input type="submit" class="btn btn-primary" value="Save" style="justify-self: flex-end;">
+            </div>
+            
+        </form>  
+
+        </div>
+        </div>
+
+
+        <div class="nameEdit">
+          <div class="divDropDown">
+            <button id="colorsEditBtn" onclick="showEditColors()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg></button>
+            <h4>Modify the Portfolio Colors</h4>
+          </div>
+          <hr/>
+          
+          <div id="partiColors">
+
+            <form class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" #fcolorSelect = "ngForm" (ngSubmit)="onColorSelected(fcolorSelect)">
+             
+              <input 
+                  type="radio" name="colors" 
+                  id="colors1" class="input-hidden" value="colors1" required [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+                  <label for="colors1">
+                      <div class="coloritems">
+                          <div class="uk-card uk-card-default uk-card-body">
+                              <div class="color1" style="background-color: #181823;"></div>
+                              <div class="color2" style="background-color: #537FE7;"></div>
+                          </div>
+                      </div>
+                  </label>
+              
+                  <input 
+                  type="radio" name="colors" 
+                  id="colors2" class="input-hidden" value="colors2" [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+                  <label for="colors2">
+                      <div class="coloritems">
+                          <div class="uk-card uk-card-default uk-card-body">
+                              <div class="color1" style="background-color: #A7727D;"></div>
+                              <div class="color2" style="background-color: #EDDBC7;"></div>
+                          </div>
+                      </div>
+
+                  </label>
+              
+                  <input 
+                  type="radio" name="colors" 
+                  id="colors3" class="input-hidden" value="colors3" [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+                  <label for="colors3">
+                      <div class="coloritems">
+                          <div class="uk-card uk-card-default uk-card-body">
+                              <div class="color1" style="background-color: #3C6255;"></div>
+                              <div class="color2" style="background-color: #EAE7B1;"></div>
+                          </div>
+                      </div>
+
+                  </label>
+              
+              
+                     
+                  
+          
+              
+              <input 
+              type="radio" name="colors" 
+              id="colors4" class="input-hidden" value="colors4" [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+              <label for="colors4">
+                      <div class="coloritems">
+                          <div class="uk-card uk-card-default uk-card-body">
+                              <div class="color1" style="background-color: #000000;"></div>
+                              <div class="color2" style="background-color: #323232;"></div>
+                          </div>
+                      </div>
+              </label>            
+
+                  
+              <input 
+              type="radio" name="colors" 
+              id="colors5" class="input-hidden" value="colors5" [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+              <label for="colors5">
+                      <div class="coloritems">
+                          <div class="uk-card uk-card-default uk-card-body">
+                              <div class="color1" style="background-color: #181D31;"></div>
+                              <div class="color2" style="background-color: #678983;"></div>
+                          </div>
+                      </div>
+              </label>
+              <input 
+              type="radio" name="colors" 
+              id="colors6" class="input-hidden" value="colors6" [(ngModel)]='colors' [ngModelOptions]="{standalone: true}"/>
+              <label for="colors6">
+                      <div class="coloritems">
+                          <div class="uk-card uk-card-default uk-card-body">
+                              <div class="color1" style="background-color: #171010;"></div>
+                              <div class="color2" style="background-color: #E3DFFD;"></div>
+                          </div>
+                      </div>
+              </label>   
+          
+
+          <div class="col-12" style="margin-top: 10px; width: 100%; display: flex; flex-direction: row;">
+              <input type="submit" class="btn btn-primary select" value="Select">
+          </div>
+          </form> 
+  
+          </div>
+          </div>
+
+          <div class="nameEdit">
+            <div class="divDropDown">
+              <button id="ServicesEditBtn" onclick="showEditServices()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg></button>
+              <h4>Modify your Services</h4>
+            </div>
+            <hr/>
+            <div id="partiService">
+
+              <div class="services">
+                <div class="addPartie">
+                <a class="uk-button uk-button-default addServiceBtn" href="#modal-sections" uk-toggle><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg></a>
+
+                <div id="modal-sections" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                        <div class="uk-modal-header">
+                            <h2 class="uk-modal-title">Add a service</h2>
+                        </div>
+                        <div class="uk-modal-body">
+                          <form class="p-4 p-md-5 border rounded-3 servicesForm" #addService = "ngForm" (ngSubmit)="onAddService(addService)">
+                            <div class="form-floating mb-3 inputDiv">
+                              <input type="text" class="form-control" id="floatingInput" placeholder="Service name" required [(ngModel)]='serviceName' [ngModelOptions]="{standalone: true}">
+                              <label for="floatingInput">Service Name</label>
+                            </div>
+                            <div class="form-floating mb-3 inputDiv">
+                              <textarea class="form-control" id="floatingarea" placeholder="description" required [(ngModel)]='serviceDescription' [ngModelOptions]="{standalone: true}"></textarea>
+                              <label for="floatingarea">Description</label>
+                            </div>
+                            
+                            <button class="btn btn-primary" type="submit">Add</button>
+                            
+                          </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>
+                <div class="afficher">
+                  <app-servic-componenet *ngFor="let s of services" [service]="s" (deleting)="ondeletetheService($event)"></app-servic-componenet>
+                  
+                </div>
+            </div>
+            
+    
+            </div>
+            </div>
+
+
+            <div class="nameEdit">
+              <div class="divDropDown">
+                <button id="ProjectsEditBtn" onclick="showEditProjects()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg></button>
+                <h4>Modify your Projects</h4>
+              </div>
+              <hr/>
+              <div id="partiProject">
+  
+                <div class="services">
+                  <div class="addPartie">
+                  <a class="uk-button uk-button-default addServiceBtn" href="#modal-sections1" uk-toggle><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                  </svg></a>
+  
+                  <div id="modal-sections1" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-default" type="button" uk-close></button>
+                        <div class="uk-modal-header">
+                            <h2 class="uk-modal-title">Add Project</h2>
+                        </div>
+                        <div class="uk-modal-body">
+                          <form class="p-4 p-md-5 border rounded-3" #fAddProject = "ngForm" (ngSubmit)="onAddProject(fAddProject)">
+                            <div class="form-floating mb-3 inputDiv">
+                              <input type="text" class="form-control" id="floatingInput" placeholder="Service name" required [(ngModel)]='projectTitle' [ngModelOptions]="{standalone: true}">
+                              <label for="floatingInput">Project Name</label>
+                            </div>
+                            <div class="form-floating mb-3 inputDiv">
+                              <textarea class="form-control" id="floatingarea" placeholder="description" required [(ngModel)]='prjectDescription' [ngModelOptions]="{standalone: true}"></textarea>
+                              <label for="floatingarea">Description</label>
+                            </div>
+                            
+                            <button class="btn btn-lg btn-primary" type="submit">Add</button>
+                            
+                          </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>
+                <div class="afficher" >
+                  <app-project-componenet *ngFor="let e of projects"  [project]= 'e' (deleting)="ondeletetheProject($event)"></app-project-componenet>
+                  
+                </div>
+              </div>
+              
+      
+              </div>
+              </div>
+
+
+              <div class="nameEdit">
+                <div class="divDropDown">
+                  <button id="SkillsEditBtn" onclick="showEditSkills()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg></button>
+                  <h4>Modify your Skills</h4>
+                </div>
+                <hr/>
+                <div id="partiSkill">
+    
+                  <div class="services">
+                    <div class="addPartie">
+                    <a class="uk-button uk-button-default addServiceBtn" href="#modal-sections2" uk-toggle><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg></a>
+    
+                    <div id="modal-sections2" uk-modal>
+                      <div class="uk-modal-dialog">
+                          <button class="uk-modal-close-default" type="button" uk-close></button>
+                          <div class="uk-modal-header">
+                              <h2 class="uk-modal-title">Add Skills</h2>
+                          </div>
+                          <div class="uk-modal-body">
+                            <form class="p-4 p-md-5 border rounded-3" #fAddSkill = "ngForm" (ngSubmit)="onAddSkill(fAddSkill)">
+                              <div class="form-floating mb-3 inputDiv">
+                                <select type="text" class="form-control" id="floatingInput" placeholder="Service name" required [(ngModel)]='skillName' [ngModelOptions]="{standalone: true}">
+                                  <option value=""></option>
+                                  <option *ngFor="let c of data1">{{c}}</option>
+                                  
+                                </select>
+                                <label for="floatingInput">Skills</label>
+                              </div>
+                              <div class="form-floating mb-3 inputDiv">
+                                <input type = "number" min="0" max="100" class="form-control" id="floatingarea" placeholder="description" required [(ngModel)]='state' [ngModelOptions]="{standalone: true}">
+                                <label for="floatingarea">Percentage</label>
+                              </div>
+                              
+                              <button class="btn btn-lg btn-primary" type="submit">Add</button>
+                              
+                            </form>
+                          </div>
+                          
+                      </div>
+                  </div>
+                  </div>
+                  <div class="afficher">
+                    <app-skill-component *ngFor="let s of skills"  [skill]= 's'  (deleting)="ondeletetheSkill($event)"></app-skill-component>
+                    
+                  </div>
+                </div>
+                
+        
+                </div>
+                </div>
+
+                <div class="nameEdit">
+                  <div class="divDropDown">
+                    <button id="ContactsEditBtn" onclick="showEditContacts()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg></button>
+                    <h4>Modify your Contacts</h4>
+                  </div>
+                  <hr/>
+                  <div id="partiContact">
+      
+                    <div class="services">
+                      <div class="addPartie">
+                      <a class="uk-button uk-button-default addServiceBtn" href="#modal-sections3" uk-toggle><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                      </svg></a>
+      
+                      <div id="modal-sections3" uk-modal>
+                        <div class="uk-modal-dialog">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <div class="uk-modal-header">
+                                <h2 class="uk-modal-title">Add Contact</h2>
+                            </div>
+                            <div class="uk-modal-body">
+                              <form class="p-4 p-md-5 border rounded-3" #fAddContact = "ngForm" (ngSubmit)="onAddContact(fAddContact)">
+                                <div class="form-floating mb-3 inputDiv">
+                                  <select type="text" class="form-control" id="floatingInput" placeholder="Service name" required [(ngModel)]='contactName' [ngModelOptions]="{standalone: true}">
+                                    <option value=""></option>
+                                    <option *ngFor="let c of data2">{{c}}</option>
+                                    
+                                  </select>
+                                  <label for="floatingInput">Contact</label>
+                                </div>
+                                <div class="form-floating mb-3 inputDiv">
+                                  <input type = "text" class="form-control" id="floatingarea" placeholder="description" required [(ngModel)]='url' [ngModelOptions]="{standalone: true}">
+                                  <label for="floatingarea">Url/Phone</label>
+                                </div>
+                                
+                                <button class="btn btn-lg btn-primary" type="submit">Add</button>
+                                
+                              </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    <div class="afficher" >
+                      <app-contact-component *ngFor="let e of contacts"  [contact]= 'e' (deleting)="ondeletetheContact($event)"></app-contact-component>
+                      
+                    </div>
+                  </div>
+                  
+          
+                  </div>
+                  </div>
+                  <div class="btns">
+                    <button class="btn btn-primary btn-lg" (click)="onPortfoliosClick()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                      </svg> Back</button>
+                    <a (click)="onReview()">View the Portfolio</a>
+                    <button class="btn btn-primary btn-lg" type="submit" (click)="onPortfoliosClick()">Finish</button>
+    
+                    </div>
+    
+  
+      
+  
+      <footer class="pt-3 mt-4 text-muted border-top">
+        FOLIO © 2023
+      </footer>
+    </div>
+  </main>
+

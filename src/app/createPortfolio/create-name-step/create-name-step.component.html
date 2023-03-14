@@ -1,0 +1,45 @@
+<div class="body">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <h1 style="text-align: center; font-weight: bold;
+        font-style: italic;
+        font-size:x-large;
+        color: #181823;">FOLIO</h1>
+        <hr/>
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start partie1">
+            <h1 class="display-4 fw-bold lh-1 mb-3">What is the name that you want to give to your Portfolio Website?</h1>
+             <form #fportfolioname = "ngForm" (ngSubmit)="onNameSaved(fportfolioname)">
+                <div class="col-12">
+                    <label for="name" class="form-label"> </label>
+                    <input type="text" class="form-control" id="name" placeholder="Write the Portfolio name" required [(ngModel)]='name' [ngModelOptions]="{standalone: true}">
+                    
+                  </div>
+                  <div class="col-12" style="margin-top: 10px; width: 100%; display: flex; flex-direction: row;">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Save" style="justify-self: flex-end;">
+                </div>
+                </form> 
+             
+             <div class="btns">
+                <button class="btn btn-primary btn-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                  </svg> Back</button>
+                <button class="btn btn-primary btn-lg" (click)="onContinue()">Continue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg></button>
+
+             </div>
+             
+             
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5 partie2">
+            <div class="p-4 p-md-5 border rounded-3">
+            <img src="../../../assets/images/step1.jpg" alt="step 1 image">
+            <div>
+                <h2>O2</h2>
+                <p>This is the name we'll put to your website.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

@@ -1,0 +1,45 @@
+.portfolioCard{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.portfolioCard:hover{
+    box-shadow: 5px 5px 10px gainsboro;
+}
+.portfolioCard .state{
+    background-color:#E5D1FA;
+    color:black;
+    
+}
+.portfolioInfos{
+    width:100%;
+    background-color: #191825;
+    padding:20px;
+    border-radius: 10px;
+}
+.actions{
+    margin-top: 10px;
+}
+.actions button{
+    border-color: #191825;
+}
+.actions button:hover{
+    border-color:#029ad6;
+    color: #029ad6;
+}
+.itemIcon{
+    width:25px;
+    height:25px;
+    color:black;
+    margin-right: 10px;
+}
+.itemNav{
+    color:black;
+}
+.itemNav:hover{
+    color:blue;
+}
+.uk-button-default{
+    margin-left: 20px;
+    margin-right: 20px;
+}

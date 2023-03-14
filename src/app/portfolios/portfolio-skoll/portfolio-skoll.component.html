@@ -1,0 +1,9 @@
+<div class="col d-flex flex-column gap-2">
+    <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+      
+    </div>
+    <h4 class="fw-semibold mb-0">{{skill.name}}</h4>
+    <div class="progressSkill">
+      <div class="persent" style="width:90%;" [ngStyle]="{'width': + skill.state + '%'}"> {{skill.state}} %</div>
+    </div>          
+  </div>

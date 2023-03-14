@@ -1,0 +1,17 @@
+<div class="container px-4 py-5 skillsdiv">
+    <h2 class="pb-2 border-bottom">Skills</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+      <div class="col d-flex flex-column align-items-start gap-2">
+        <p class="text-muted">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+      </div>
+
+      <div class="col">
+        <div class="row row-cols-1 row-cols-sm-2 g-4">
+          <app-portfolio-skoll *ngFor="let s of skills" [skill] = "s"></app-portfolio-skoll>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>

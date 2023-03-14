@@ -1,0 +1,86 @@
+
+p{
+    font-size: 20px;
+}
+.foliologo{
+    font-weight: bold;
+    font-style: italic;
+    font-size:large;
+    color: #181823;
+}
+.section1{
+    background-color: #ECF2FF;
+}
+.section2{
+    background-color: #EEEEEE;
+    margin-bottom: 10px;
+}
+.btn-primary , .btn-outline-primary{
+    margin-right: 10px;
+}
+.btn-primary{
+    background-color: #635985;
+    color:white;
+    text-decoration: none;
+    border-color: #635985;
+}
+.btn-primary:hover, .btn-outline-primary:hover{
+    background-color:#E5D1FA ;
+    color: black;
+}
+.btn-outline-primary{
+    color: black;
+    border-color: #635985;
+}
+.imagetemplate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagetemplate img{
+    height:600px;
+}
+section .container{
+    padding-bottom:20px;
+    padding-top: 20px;
+}
+.fw-bold span{
+    color:blue;
+}
+.order-md-1 img{
+    width:500px;
+    height:600px;
+    margin-left: 10px;
+}
+.order-md-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.order-md-2 h2{
+    text-align: center;
+}
+.order-md-2 ul{
+    margin-top: 20px;
+}
+.order-md-2 li{
+    font-size: 20px;
+    font-weight: bold;
+}
+.bi-check-circle-fill{
+    color:blue;
+}
+.featurette{
+    padding:30px;
+}
+.section3{
+    background-color: #18122B;
+}
+.section3 h1{
+    margin-bottom: 10px;
+}
+.section3 span{
+    color:white
+}
