@@ -34,7 +34,7 @@ export class PortfolioComponentComponent implements OnInit{
      window.open(result,'_blank');
     }
     else{
-      const result =this.router.serializeUrl(this.router.createUrlTree(['/portfolio/home',this.portfolio.portfolioId]));
+      const result =this.router.serializeUrl(this.router.createUrlTree(['/portfolio2/home',this.portfolio.portfolioId]));
      window.open(result,'_blank');
     }
   }

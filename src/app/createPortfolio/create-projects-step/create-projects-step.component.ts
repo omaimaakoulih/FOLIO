@@ -32,7 +32,7 @@ export class CreateProjectsStepComponent implements OnInit{
     });
 
 
-    // services display
+    let project!:Project;
 
     const collectionInstance = collection(this.firestore,'projects');
     
@@ -42,7 +42,11 @@ export class CreateProjectsStepComponent implements OnInit{
       
       val.forEach(v => {
         if(v['portfolioId'] == this.portfolioId && this.refresh){
-        this.projects.push(new Project(v['title'],v['description'],v['portfolioId'],v['id']));
+          project = new Project(v['title'],v['description'],v['portfolioId'],v['id']);
+
+          if(!this.projects.some((s) => s.title == project.title && s.description == project.description && s.portfolioId== project.portfolioId && project.projectId == s.projectId)){
+            this.projects.push(project);
+          }
         }
       }
       )

@@ -49,6 +49,27 @@ export class Portfolio2Component {
       
       }
     );
+
+
+    const collectionInstance2= collection(this.firestore,'contacts');
+    
+    
+    collectionData(collectionInstance2,{idField:'id'}).subscribe((val) =>{
+      
+      
+      val.forEach(v => {
+        if(v['portfolioId'] == this.portfolioId){
+            this.contacts.push(new Contact(v['name'].toLowerCase(),v['adress'],v['portfolioId'], v['id']));
+            
+          
+        }
+      }
+      
+
+      );
+      console.log(this.contacts);
+      }
+    );
   }
 
   aboutMe(){

@@ -33,6 +33,8 @@ export class CreateContactsStepComponent implements OnInit{
 
     });
 
+    let contact!:Contact;
+
     const collectionInstance = collection(this.firestore,'contacts');
     
     
@@ -41,7 +43,10 @@ export class CreateContactsStepComponent implements OnInit{
       
       val.forEach(v => {
         if(v['portfolioId'] == this.portfolioId && this.resfresh){
-        this.contacts.push(new Contact(v['name'],v['adress'],v['portfolioId'],v['id']));
+          contact = new Contact(v['name'],v['adress'],v['portfolioId'],v['id'])
+          if(!this.contacts.some((s) => s.name == contact.name && s.adress == contact.adress && s.portfolioId== contact.portfolioId && contact.cantactId == s.cantactId)){
+            this.contacts.push(contact);
+          }
         }
       }
       )

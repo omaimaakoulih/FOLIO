@@ -32,7 +32,7 @@ export class CreateServicesStepComponent implements OnInit{
     });
 
 
-    // services display
+    let service!:Service;
 
     const collectionInstance = collection(this.firestore,'services');
     
@@ -42,7 +42,11 @@ export class CreateServicesStepComponent implements OnInit{
       
       val.forEach(v => {
         if(v['portfolioId'] == this.portfolioId && this.refresh){
-          this.services.push(new Service(v['name'],v['description'],v['portfolioId'],v['id']));
+          service = new Service(v['name'],v['description'],v['portfolioId'],v['id']);
+          if(!this.services.some((s) => s.name == service.name && s.description == service.description && s.portfolioId== service.portfolioId && service.serviceId == s.serviceId)){
+            this.services.push(service);
+          }
+          
         }
         }
       )
@@ -51,9 +55,6 @@ export class CreateServicesStepComponent implements OnInit{
 
 
   }
-
-
-
 
 
   onAddService(f:any){

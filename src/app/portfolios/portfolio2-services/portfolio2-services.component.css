@@ -1,7 +1,7 @@
 .text-left{
     height:100vh;
     filter: brightness(90%);
-    background-color: #EEEEEE;
+    /*background-color: #EEEEEE;*/
     /*background-image: url('../../../assets/templates/design/photo1.jpg');*/
 }
 main{

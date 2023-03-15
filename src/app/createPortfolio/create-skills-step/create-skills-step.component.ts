@@ -122,6 +122,7 @@ export class CreateSkillsStepComponent implements OnInit{
 
     });
 
+    let skill!:Skill;
     const collectionInstance = collection(this.firestore,'skills');
     
     
@@ -130,7 +131,10 @@ export class CreateSkillsStepComponent implements OnInit{
       
       val.forEach(v => {
         if(v['portfolioId'] == this.portfolioId && this.refresh){
-        this.skills.push(new Skill(v['name'],v['state'],v['portfolioId'],v['id']));
+          skill = new Skill(v['name'],v['state'],v['portfolioId'],v['id']);
+          if(!this.skills.some((s) => s.name == skill.name && s.state == skill.state && s.portfolioId== skill.portfolioId && skill.skillId == s.skillId)){
+            this.skills.push(skill);
+          }
         }
       }
 
