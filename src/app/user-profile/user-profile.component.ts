@@ -4,6 +4,7 @@ import { Firestore, collection, addDoc, collectionData,doc, updateDoc } from "@a
 import { getDownloadURL, ref, Storage, uploadBytes } from '@angular/fire/storage';
 import { User } from '../models/user.model';
 import { finalize, from, map, switchMap, tap } from 'rxjs';
+import { UserService } from './services/userService.service';
 
 
 @Component({
@@ -32,15 +33,22 @@ export class UserProfileComponent implements OnInit{
 
   selectedFile!:File;
   downloadUrl!:string;
+  countries!:string[];
+  cities!:string[];
 
 
-  constructor(private router: Router,private route: ActivatedRoute,private firestore:Firestore, private storage:Storage){}
+  constructor(private router: Router,private route: ActivatedRoute,private firestore:Firestore, private storage:Storage, private userService:UserService){}
   
   
   ngOnInit(): void {
       this.sub = this.route.params.subscribe((param)=>{
         this.useName = param['id'];
     });
+
+
+    //
+    this.countries = this.userService.getCountries();
+    this.cities = this.userService.getCities();
 
     const collectionInscatce = collection(this.firestore,'users');
 

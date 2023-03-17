@@ -36,7 +36,7 @@ export class CreateColorsStepComponent {
 
   onColorSelected(f:any){
 
-    window.alert(this.colors);
+    
     
     const docInstance = doc(this.firestore , 'portfolios',this.portfolioId);
 
