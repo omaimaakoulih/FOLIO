@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Folio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # FOLIO
 FOLIO is an Angular and Firebase-based project designed to make portfolio creation quick and easy. this Project helps  you to  easily create a beautiful and responsive portfolio that showcases your skills, projects, and contacts.
->>>>>>> 97e0fc8b3dbe6b6acd44e878056d23a37bb0b830
+
